@@ -1,0 +1,54 @@
+/* *************** ---------- HELPERS ---------- *************** */
+/* ----- FUNCTIONS ----- */
+/* ----- VARS ----- */
+/* base pixel size (used to calculate EM values) */
+/* sets standard vertical spacing from give PX value to EMs */
+/* ----- MIXINS ----- */
+/* *************** ---------- ITEM ---------- *************** */
+.item {
+  background: #fff;
+  border: 2px solid #32c996;
+  display: inline-block;
+  margin: 0 1.5625em 1.5625em 0;
+  padding: 1.5625em 1.875em;
+  text-align: center;
+  vertical-align: top;
+  width: 30.5%;
+  /*width: toUnit(282);*/
+  transition: transform 0.2s linear 0s; }
+  .item.out-of-stock {
+    transition: opacity 0.2s linear 0s;
+    border-color: #b0b0b0;
+    opacity: .5;
+    pointer-events: none; }
+    .item.out-of-stock button.btn.round {
+      /*background-color: $colorDisable;*/
+      opacity: 0; }
+  .item:hover {
+    transform: scale(1.04); }
+  .item .item-picture {
+    margin-bottom: 0.3125em;
+    height: 12.8125em;
+    line-height: 11.5625em;
+    overflow: hidden;
+    width: 100%; }
+    .item .item-picture img {
+      height: auto;
+      vertical-align: middle;
+      width: 80%; }
+  .item .item-details .item-name {
+    margin-bottom: 0.9375em;
+    text-transform: capitalize; }
+    .item .item-details .item-name h3 {
+      font-weight: normal; }
+  .item .item-details .item-info {
+    margin-bottom: 1.5625em; }
+    .item .item-details .item-info .item-price {
+      font-size: 2.1875em; }
+    .item .item-details .item-info .item-price {
+      margin-right: 0.125em; }
+    .item .item-details .item-info .item-quantity {
+      font-size: 1.25em;
+      text-transform: capitalize; }
+  .item .item-ctas button {
+    width: 100%; }

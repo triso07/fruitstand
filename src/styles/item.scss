@@ -1,0 +1,78 @@
+@import "utils.scss";
+
+
+
+/* *************** ---------- ITEM ---------- *************** */
+.item {
+  background: #fff;
+  border: 2px solid $colorMain;
+  display: inline-block;
+  margin: 0 toUnit(25) toUnit(25) 0;
+  padding: $vSpace toUnit(30);
+  text-align: center;
+  vertical-align: top;
+  width: 30.5%;
+  /*width: toUnit(282);*/
+  @include transition(transform);
+  &.out-of-stock {
+    @include transition(opacity);
+    border-color: $colorDisable;
+    opacity: .5;
+    pointer-events: none;
+    button.btn.round {
+      /*background-color: $colorDisable;*/
+      opacity: 0;
+    }
+  }
+  &:hover {
+    transform: scale(1.04);
+  }
+  .item-picture {
+    margin-bottom: toUnit(5);
+    height: toUnit(205);
+    line-height: toUnit(185);
+    overflow: hidden;
+    width: 100%;
+    img {
+      height: auto;
+      vertical-align: middle;
+      width: 80%;
+    }
+  }
+  .item-details {
+    .item-name {
+      margin-bottom: toUnit(15);
+      text-transform: capitalize;
+      h3 {
+        font-weight: normal;
+      }
+    }
+    .item-info {
+      margin-bottom: toUnit(25);
+      .item-price {
+        font-size: toUnit(35);
+      }
+      .item-price {
+        margin-right: toUnit(2);
+      }
+      .item-quantity {
+        font-size: toUnit(20);
+        text-transform: capitalize;
+      }
+    }
+  }
+  .item-ctas button {
+    width: 100%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
